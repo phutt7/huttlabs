@@ -1,68 +1,42 @@
 import Image from "next/image";
+import Link from "next/link";
 
 export default function Home() {
   return (
-    <main
-      style={{
-        textAlign: "center",
-        padding: "60px 20px",
-        display: "flex",
-        flexDirection: "column",
-        alignItems: "center",
-      }}
-    >
+    <main className="max-w-5xl mx-auto px-6 py-20 text-center">
+      
       <Image
         src="/images/profile.jpg"
         alt="Palmer Hutt"
-        width={150}
-        height={150}
-        style={{ borderRadius: "50%" }}
+        width={140}
+        height={140}
+        className="mx-auto rounded-full mb-8"
       />
 
-      <h1
-        style={{
-          fontSize: "36px",
-          fontWeight: "700",
-          marginTop: "24px",
-        }}
-      >
+      <h1 className="text-4xl font-bold mb-6">
         Palmer Hutt
       </h1>
 
-      <p
-        style={{
-          fontSize: "18px",
-          marginTop: "12px",
-          maxWidth: "600px",
-          lineHeight: "1.7",
-        }}
-      >
-        Embedded & Systems Engineer delivering customer-facing technical solutions from concept to deployment.
+      <p className="text-lg max-w-2xl mx-auto leading-relaxed text-gray-700">
+        Embedded & Systems Engineer delivering customer-facing technical solutions
+        from concept to deployment.
       </p>
 
-      <div style={{ marginTop: "30px", display: "flex", gap: "20px" }}>
-        <a
+      <div className="mt-10 flex justify-center gap-6">
+        <Link
           href="/projects"
-          style={{
-            padding: "10px 20px",
-            border: "2px solid #000",
-            fontWeight: "600",
-            textDecoration: "none",
-          }}
+          className="px-6 py-3 border border-black rounded-lg 
+                     transition hover:bg-black hover:text-white"
         >
-          Projects
-        </a>
+          View Projects
+        </Link>
 
         <a
           href="/resume.pdf"
-          style={{
-            padding: "10px 20px",
-            border: "2px solid #000",
-            fontWeight: "600",
-            textDecoration: "none",
-          }}
+          className="px-6 py-3 border border-black rounded-lg 
+                     transition hover:bg-black hover:text-white"
         >
-          Resume
+          Download Resume
         </a>
       </div>
     </main>
