@@ -2,70 +2,74 @@ import Image from "next/image";
 
 const projects = [
   {
-    title: "Smart False Window — Embedded Lighting System",
+    title: "Smart False Window",
     image: "/images/project1.jpg",
-    problem: "Simulate natural daylight indoors.",
-    architecture: "Microcontroller-based PWM lighting system.",
-    outcome: "Stable long-term deployed system."
+    description:
+      "Simulate natural daylight using microcontroller-based PWM lighting with thermal and timing constraints.",
   },
   {
     title: "Smart Light Alarm System",
     image: "/images/project2.jpg",
-    problem: "Alarm-synchronized embedded lighting solution.",
-    architecture: "Microcontroller + scheduling firmware.",
-    outcome: "Reliable timed state transitions."
+    description:
+      "Embedded alarm-triggered lighting solution with scheduling logic and stable performance.",
   },
   {
     title: "5×5 LED Matrix Audio-Reactive Display",
     image: "/images/project3.jpg",
-    problem: "Real-time audio visualization system.",
-    architecture: "Microcontroller + audio input processing + LED matrix.",
-    outcome: "Responsive signal-driven display."
-  }
+    description:
+      "Real-time audio-reactive LED visualization built with signal processing and customized firmware.",
+  },
 ];
 
 export default function Projects() {
   return (
-    <main>
-      <h1 style={{ fontSize: "28px", fontWeight: "bold" }}>
+    <main style={{ textAlign: "center", padding: "40px 20px" }}>
+      <h1 style={{ fontSize: "32px", fontWeight: "bold", marginBottom: "24px" }}>
         Projects
       </h1>
 
-      <div style={{ marginTop: "40px", display: "flex", flexDirection: "column", gap: "60px" }}>
-        {projects.map((project, index) => (
-          <div key={index} style={{
-            display: "flex",
-            gap: "30px",
-            alignItems: "center",
-            flexWrap: "wrap"
-          }}>
-            
+      <div
+        style={{
+          display: "grid",
+          gap: "60px",
+          gridTemplateColumns: "repeat(auto-fit, minmax(320px, 1fr))",
+          justifyItems: "center",
+        }}
+      >
+        {projects.map((p, i) => (
+          <div
+            key={i}
+            style={{
+              maxWidth: "400px",
+              textAlign: "left",
+              borderRadius: "12px",
+              overflow: "hidden",
+              boxShadow: "0 4px 12px rgba(0,0,0,0.15)",
+              backgroundColor: "#fff",
+              color: "#000",
+            }}
+          >
             <Image
-              src={project.image}
-              alt={project.title}
-              width={300}
-              height={200}
-              style={{ borderRadius: "12px" }}
+              src={p.image}
+              alt={p.title}
+              width={400}
+              height={240}
+              style={{ objectFit: "cover" }}
             />
-
-            <div style={{ maxWidth: "500px" }}>
-              <h2 style={{ fontSize: "20px", fontWeight: "600" }}>
-                {project.title}
+            <div style={{ padding: "24px" }}>
+              <h2
+                style={{
+                  fontSize: "20px",
+                  fontWeight: "600",
+                  marginBottom: "12px",
+                }}
+              >
+                {p.title}
               </h2>
-
-              <p style={{ marginTop: "10px" }}>
-                <strong>Problem:</strong> {project.problem}
-              </p>
-
-              <p>
-                <strong>Architecture:</strong> {project.architecture}
-              </p>
-
-              <p>
-                <strong>Outcome:</strong> {project.outcome}
+              <p style={{ fontSize: "16px", lineHeight: "1.6" }}>
+                {p.description}
               </p>
             </div>
-
           </div>
         ))}
       </div>

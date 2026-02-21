@@ -1,43 +1,68 @@
-import Link from "next/link";
 import Image from "next/image";
 
 export default function Home() {
   return (
-    <main>
-      <div style={{ display: "flex", alignItems: "center", gap: "30px" }}>
-        
-        <Image
-          src="/images/profile.jpg"
-          alt="Palmer Hutt"
-          width={120}
-          height={120}
-          style={{ borderRadius: "50%" }}
-        />
+    <main
+      style={{
+        textAlign: "center",
+        padding: "60px 20px",
+        display: "flex",
+        flexDirection: "column",
+        alignItems: "center",
+      }}
+    >
+      <Image
+        src="/images/profile.jpg"
+        alt="Palmer Hutt"
+        width={150}
+        height={150}
+        style={{ borderRadius: "50%" }}
+      />
 
-        <div>
-          <h1 style={{ fontSize: "32px", fontWeight: "bold" }}>
-            Embedded & Systems Engineer Delivering Customer-Facing Technical Solutions
-          </h1>
+      <h1
+        style={{
+          fontSize: "36px",
+          fontWeight: "700",
+          marginTop: "24px",
+        }}
+      >
+        Palmer Hutt
+      </h1>
 
-          <p style={{ marginTop: "16px" }}>
-            From requirements definition to deployed systems — hardware, integration, and implementation execution.
-          </p>
-        </div>
-      </div>
+      <p
+        style={{
+          fontSize: "18px",
+          marginTop: "12px",
+          maxWidth: "600px",
+          lineHeight: "1.7",
+        }}
+      >
+        Embedded & Systems Engineer delivering customer-facing technical solutions from concept to deployment.
+      </p>
 
-      <ul style={{ marginTop: "30px" }}>
-        <li>Systems-Level Ownership</li>
-        <li>Cross-Functional Delivery</li>
-        <li>Embedded & Energy Systems Experience</li>
-      </ul>
+      <div style={{ marginTop: "30px", display: "flex", gap: "20px" }}>
+        <a
+          href="/projects"
+          style={{
+            padding: "10px 20px",
+            border: "2px solid #000",
+            fontWeight: "600",
+            textDecoration: "none",
+          }}
+        >
+          Projects
+        </a>
 
-      <div style={{ marginTop: "24px" }}>
-        <Link href="/projects" style={{ marginRight: "20px" }}>
-          View Projects
-        </Link>
-
-        <a href="/resume.pdf" target="_blank">
-          Download Resume
+        <a
+          href="/resume.pdf"
+          style={{
+            padding: "10px 20px",
+            border: "2px solid #000",
+            fontWeight: "600",
+            textDecoration: "none",
+          }}
+        >
+          Resume
         </a>
       </div>
     </main>
