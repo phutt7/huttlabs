@@ -11,7 +11,7 @@ const projects = [
     title: "Smart Light Alarm System",
     image: "/images/project2.jpg",
     description:
-      "Embedded scheduling-based lighting solution with structured firmware.",
+      "Embedded scheduling-based lighting with structured firmware logic.",
   },
   {
     title: "5×5 LED Matrix Audio-Reactive Display",
@@ -24,7 +24,6 @@ const projects = [
 export default function Projects() {
   return (
     <main className="max-w-6xl mx-auto px-6 py-20">
-      
       <h1 className="text-4xl font-bold text-center mb-16">
         Projects
       </h1>
@@ -33,8 +32,9 @@ export default function Projects() {
         {projects.map((project, index) => (
           <div
             key={index}
-            className="bg-white rounded-xl shadow-md overflow-hidden 
-                       transition duration-300 hover:shadow-xl hover:-translate-y-2"
+            className="bg-slate-800 rounded-xl overflow-hidden 
+                       transition duration-300 
+                       hover:shadow-2xl hover:-translate-y-2"
           >
             <Image
               src={project.image}
@@ -44,11 +44,11 @@ export default function Projects() {
               className="w-full h-56 object-cover"
             />
 
-            <div className="p-6 text-left">
+            <div className="p-6">
               <h2 className="text-xl font-semibold mb-3">
                 {project.title}
               </h2>
-              <p className="text-gray-600 leading-relaxed">
+              <p className="text-slate-300 leading-relaxed">
                 {project.description}
               </p>
             </div>

@@ -27,30 +27,16 @@ export default function RootLayout({
             padding: "40px 20px",
           }}
         >
-          <nav
-            style={{
-              display: "flex",
-              justifyContent: "space-between",
-              marginBottom: "40px",
-            }}
-          >
-            <div style={{ fontWeight: "bold" }}>Palmer Hutt</div>
-            <div>
-              <a href="/" style={{ marginRight: "20px", color: "#e2e8f0" }}>
-                Home
-              </a>
-              <a href="/projects" style={{ marginRight: "20px", color: "#e2e8f0" }}>
-                Projects
-              </a>
-              <a href="/about" style={{ marginRight: "20px", color: "#e2e8f0" }}>
-                About
-              </a>
-              <a href="/contact" style={{ color: "#e2e8f0" }}>
-                Contact
-              </a>
-            </div>
-          </nav>
+<nav className="flex justify-between items-center mb-16">
+  <div className="font-bold text-lg">Palmer Hutt</div>
 
+  <div className="flex gap-8 text-sm">
+    <a href="#projects" className="hover:opacity-60">Projects</a>
+    <a href="#about" className="hover:opacity-60">About</a>
+    <a href="#skills" className="hover:opacity-60">Skills</a>
+    <a href="#contact" className="hover:opacity-60">Contact</a>
+  </div>
+</nav>
           {children}
         </div>
       </body>
