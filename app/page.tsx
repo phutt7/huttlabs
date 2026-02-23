@@ -323,7 +323,7 @@ const projects = [
 		</p> 
 		
 		
-		<p className="text-slate-300 font-bold">
+		<p className="pt-10 text-slate-300 font-bold">
 			Implementation & Systems Integration Expertise
 			</p> 
 			
@@ -332,7 +332,7 @@ const projects = [
 		</p> 
 		
 		
-		<p className="text-slate-300 font-bold">
+		<p className="pt-10 text-slate-300 font-bold">
 			Customer-Facing & Cross-Functional Leadership
 			</p> 
 			<p className="text-slate-300">
@@ -340,7 +340,7 @@ const projects = [
 		</p>
 
 		
-		<p className="text-slate-300 font-bold">
+		<p className="pt-10 text-slate-300 font-bold">
 			Value-Driven Engineering & Execution
 			</p> 
 		
