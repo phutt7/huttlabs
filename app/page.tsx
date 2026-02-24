@@ -55,35 +55,25 @@ const projects = [
     <main className="max-w-5xl mx-auto px-6">
 	
 	{/* NAVBAR */}
-<header className="fixed top-6 left-1/2 -translate-x-1/2 z-50">
-  <nav className="bg-slate-900/80 backdrop-blur-md border border-slate-700 px-8 py-3 rounded-full shadow-lg">
+	<header className="fixed top-4 left-1/2 -translate-x-1/2 z-50 w-[95%] max-w-4xl">
+  <nav className="bg-slate-900/80 backdrop-blur-md border border-slate-700 px-4 sm:px-8 py-3 rounded-2xl sm:rounded-full shadow-lg">
     
-    <div className="flex items-center space-x-6 text-sm">
+    <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-3 sm:gap-6 text-sm">
       
       {/* Name */}
-      <div className="pr-6 border-r border-slate-600">
-        <p className="text-lg font-semibold text-white tracking-wide">
+      <div className="text-center sm:text-left">
+        <p className="text-base sm:text-lg font-semibold text-white tracking-wide">
           Palmer Hutt
         </p>
       </div>
 
       {/* Links */}
-      <div className="flex items-center space-x-8">
-        <a href="#hero" className="text-slate-300 hover:text-white transition">
-          Home
-        </a>
-        <a href="#projects" className="text-slate-300 hover:text-white transition">
-          Projects
-        </a>
-        <a href="#skills" className="text-slate-300 hover:text-white transition">
-          Skills
-        </a>
-        <a href="#about" className="text-slate-300 hover:text-white transition">
-          About
-        </a>
-        <a href="#contact" className="text-slate-300 hover:text-white transition">
-          Contact
-        </a>
+      <div className="flex flex-wrap justify-center sm:justify-end gap-4 sm:gap-8">
+        <a href="#hero" className="text-slate-300 hover:text-white transition">Home</a>
+        <a href="#projects" className="text-slate-300 hover:text-white transition">Projects</a>
+        <a href="#skills" className="text-slate-300 hover:text-white transition">Skills</a>
+        <a href="#about" className="text-slate-300 hover:text-white transition">About</a>
+        <a href="#contact" className="text-slate-300 hover:text-white transition">Contact</a>
       </div>
 
     </div>
