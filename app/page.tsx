@@ -18,7 +18,7 @@ export default function Home() {
       image: "/images/project0.jpg",
       preview: "Real-time embedded firmware framework with ISR-driven ADC sampling, RTOS task pipeline, relay control, and hardware watchdog supervision on STM32.",
       skills: ["Embedded C", "FreeRTOS", "STM32 HAL", "ISR Design", "RTOS Architecture", "Hardware Debugging", "UART Telemetry", "Watchdog Supervision"],
-      videoUrl: "https://www.youtube.com/watch?v=YOUR_VIDEO_ID",
+      videoUrl: "https://youtu.be/kteZofPFyLA,
       docsUrl: "/docs/rtos-project-spec.pdf",
       description:
         "Designed and implemented a production-style deterministic firmware framework on an STM32F401RE Nucleo board using FreeRTOS (CMSIS-RTOS V2). Architected a three-task pipeline — data processing, control logic, and UART telemetry — communicating via a lock-free ring buffer and FreeRTOS message queue. Integrated a hardware timer ISR sampling an analog input at 1kHz, driving a relay output against a configurable threshold with fault detection, overflow monitoring, and IWDG watchdog supervision to ensure safe system recovery under failure conditions.",
