@@ -25,17 +25,6 @@ export default function Home() {
     },
     {
       id: 1,
-      title: "Ford Ranger EV 2000 – Battery Modernization",
-      image: "/images/project4.jpg",
-      preview: "Full battery system retrofit on a 2000 Ford Ranger EV — replacing legacy NiMH pack with a modern lithium architecture.",
-      skills: ["Battery Systems", "EV Architecture", "BMS Integration", "System Validation", "Electrical Design", "Thermal Management"],
-      videoUrl: null,
-      docsUrl: null,
-      description:
-        "Executing a full battery system retrofit on a 2000 Ford Ranger EV, replacing the legacy NiMH pack with a modern lithium chemistry architecture. Scope includes battery chemistry evaluation, BMS selection, pack sizing, thermal management planning, and compatibility validation against existing vehicle electronics and motor controller. Documenting the full integration process including capacity calculations, charge/discharge profiles, and safety compliance considerations.",
-    },
-    {
-      id: 2,
       title: "Smart False Window – Embedded Lighting System",
       image: "/images/project1.jpg",
       preview: "Microcontroller-based lighting system simulating natural daylight for better ambiance and energy efficiency.",
@@ -46,7 +35,7 @@ export default function Home() {
         "Simulated natural daylight cycles through custom microcontroller-based lighting architecture, enhancing indoor ambiance and energy efficiency. Integrated hardware components and enclosure design considerations, ensuring long-term reliability and consistent performance under real-world operating conditions. Implemented precision PWM control logic to manage brightness transitions while upholding thermal stability and component longevity.",
     },
     {
-      id: 3,
+      id: 2,
       title: "Smart Light Alarm System",
       image: "/images/project2.jpg",
       preview: "Embedded scheduling-based lighting with structured firmware logic.",
@@ -57,7 +46,7 @@ export default function Home() {
         "Automated lighting schedules with embedded firmware logic, enabling timed state transitions for alarm and lighting scenarios. Incorporated hardware-software controls for reliable synchronization between microcontroller signals and physical lighting outputs.",
     },
     {
-      id: 4,
+      id: 3,
       title: "5×5 LED Matrix Audio-Reactive Display",
       image: "/images/project3.jpg",
       preview: "Real-time audio-driven LED visualization system.",
