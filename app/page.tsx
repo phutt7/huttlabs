@@ -23,8 +23,19 @@ export default function Home() {
       description:
         "Designed and implemented a production-style deterministic firmware framework on an STM32F401RE Nucleo board using FreeRTOS (CMSIS-RTOS V2). Architected a three-task pipeline — data processing, control logic, and UART telemetry — communicating via a lock-free ring buffer and FreeRTOS message queue. Integrated a hardware timer ISR sampling an analog input at 1kHz, driving a relay output against a configurable threshold with fault detection, overflow monitoring, and IWDG watchdog supervision to ensure safe system recovery under failure conditions.",
     },
+	{
+  id: 1,
+  title: "Real-Time Energy Monitor — Modbus RTU + MQTT",
+  image: "/images/project2_energy.jpg",
+  preview: "STM32F401RE + FreeRTOS reads a PZEM-004T power meter over Modbus RTU, detects faults, and publishes live voltage/current/power to HiveMQ via ESP8266 WiFi.",
+  skills: ["Embedded C", "FreeRTOS", "Modbus RTU", "MQTT", "STM32 HAL", "CRC16", "ESP8266 AT", "IWDG Watchdog", "Mutex Architecture"],
+  videoUrl: "https://www.youtube.com/watch?v=YOUR_VIDEO_ID",
+  docsUrl: "/docs/Modbus_Energy_Monitor_Spec.pdf",
+  description:
+    "Implemented a real-time energy monitoring node from scratch on STM32F401RE. Custom Modbus RTU driver — no library — constructs the 8-byte request frame with CRC16 and parses the 25-byte PZEM-004T response into six AC measurements. Three prioritized FreeRTOS tasks handle polling, fault detection, and telemetry under a mutex-protected shared data struct. Fault monitor kicks the IWDG watchdog every 100ms — four configurable thresholds: over-power, under-voltage, low power factor, comms timeout. Task C formats CSV to USART2 for local logging and JSON to USART3 for ESP8266 MQTT publish to HiveMQ. Protocols directly relevant to solar inverter and BMS integration work at companies like Enphase, SolarEdge, and Stem.",
+},
     {
-      id: 1,
+      id: 2,
       title: "Ford Ranger EV 2000 – Battery Modernization",
       image: "/images/project4.jpg",
       preview: "Full battery system retrofit on a 2000 Ford Ranger EV — replacing legacy NiMH pack with a modern lithium architecture.",
@@ -35,7 +46,7 @@ export default function Home() {
         "Executing a full battery system retrofit on a 2000 Ford Ranger EV, replacing the legacy NiMH pack with a modern lithium chemistry architecture. Scope includes battery chemistry evaluation, BMS selection, pack sizing, thermal management planning, and compatibility validation against existing vehicle electronics and motor controller. Documenting the full integration process including capacity calculations, charge/discharge profiles, and safety compliance considerations.",
     },
     {
-      id: 2,
+      id: 3,
       title: "Smart False Window – Embedded Lighting System",
       image: "/images/project1.jpg",
       preview: "Microcontroller-based lighting system simulating natural daylight for better ambiance and energy efficiency.",
@@ -46,7 +57,7 @@ export default function Home() {
         "Simulated natural daylight cycles through custom microcontroller-based lighting architecture, enhancing indoor ambiance and energy efficiency. Integrated hardware components and enclosure design considerations, ensuring long-term reliability and consistent performance under real-world operating conditions. Implemented precision PWM control logic to manage brightness transitions while upholding thermal stability and component longevity.",
     },
     {
-      id: 3,
+      id: 4,
       title: "Smart Light Alarm System",
       image: "/images/project2.jpg",
       preview: "Embedded scheduling-based lighting with structured firmware logic.",
@@ -57,7 +68,7 @@ export default function Home() {
         "Automated lighting schedules with embedded firmware logic, enabling timed state transitions for alarm and lighting scenarios. Incorporated hardware-software controls for reliable synchronization between microcontroller signals and physical lighting outputs.",
     },
     {
-      id: 4,
+      id: 5,
       title: "5×5 LED Matrix Audio-Reactive Display",
       image: "/images/project3.jpg",
       preview: "Real-time audio-driven LED visualization system.",
