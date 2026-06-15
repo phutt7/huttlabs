@@ -34,8 +34,19 @@ export default function Home() {
   description:
     "Implemented a real-time energy monitoring node from scratch on STM32F401RE. Custom Modbus RTU driver — no library — constructs the 8-byte request frame with CRC16 and parses the 25-byte PZEM-004T response into six AC measurements. Three prioritized FreeRTOS tasks handle polling, fault detection, and telemetry under a mutex-protected shared data struct. Fault monitor kicks the IWDG watchdog every 100ms — four configurable thresholds: over-power, under-voltage, low power factor, comms timeout. Task C formats CSV to USART2 for local logging and JSON to USART3 for ESP8266 MQTT publish to HiveMQ. Protocols directly relevant to solar inverter and BMS integration work at companies like Enphase, SolarEdge, and Stem.",
 },
+{
+  id: 2,
+  title: "BMS / CAN Bus Data Logger — FreeRTOS + bxCAN + MQTT",
+  image: "/images/project3_bms.jpg",
+  preview: "STM32 F446RE reads live battery management system data off a CAN bus, logs timestamped CSV to MicroSD via FatFS, and streams parsed telemetry to HiveMQ via ESP8266.",
+  skills: ["Embedded C", "FreeRTOS", "bxCAN", "CAN Bus", "FatFS", "SPI", "MQTT", "ESP8266 AT", "STM32 HAL", "IWDG Watchdog", "Mutex Architecture"],
+  videoUrl: null,
+  docsUrl: "/docs/BMS_CAN_Logger_Spec.pdf",
+  description:
+    "Designed and implemented a real-time CAN bus data acquisition system on STM32 F446RE targeting battery storage and EV monitoring use cases. Five prioritized FreeRTOS tasks handle interrupt-driven CAN frame reception, BMS message parsing, MicroSD CSV logging via FatFS, MQTT telemetry via ESP8266, and fault monitoring with IWDG watchdog supervision. Parses the standard BMS CAN protocol — IDs 0x351, 0x355, 0x356, 0x35A, 0x35E — decoding pack voltage, current, SOC, SOH, temperature, and fault flags into a mutex-protected shared data struct. MicroSD logs auto-increment per boot (LOG_NNNN.CSV) with periodic f_sync() for data integrity. Identified hardware constraint during development — STM32F401RE lacks a CAN controller — evaluated MCU options, and selected F446RE as a pin-compatible drop-in replacement. CAN bus is the backbone protocol of every EV, solar inverter, and commercial battery storage system; directly relevant to FAE and solutions engineering roles at Enphase, SolarEdge, Stem, and Span.io.",
+},
     {
-      id: 2,
+      id: 3,
       title: "Ford Ranger EV 2000 – Battery Modernization",
       image: "/images/project4.jpg",
       preview: "Full battery system retrofit on a 2000 Ford Ranger EV — replacing legacy NiMH pack with a modern lithium architecture.",
@@ -46,7 +57,7 @@ export default function Home() {
         "Executing a full battery system retrofit on a 2000 Ford Ranger EV, replacing the legacy NiMH pack with a modern lithium chemistry architecture. Scope includes battery chemistry evaluation, BMS selection, pack sizing, thermal management planning, and compatibility validation against existing vehicle electronics and motor controller. Documenting the full integration process including capacity calculations, charge/discharge profiles, and safety compliance considerations.",
     },
     {
-      id: 3,
+      id: 4,
       title: "Smart False Window – Embedded Lighting System",
       image: "/images/project1.jpg",
       preview: "Microcontroller-based lighting system simulating natural daylight for better ambiance and energy efficiency.",
@@ -57,7 +68,7 @@ export default function Home() {
         "Simulated natural daylight cycles through custom microcontroller-based lighting architecture, enhancing indoor ambiance and energy efficiency. Integrated hardware components and enclosure design considerations, ensuring long-term reliability and consistent performance under real-world operating conditions. Implemented precision PWM control logic to manage brightness transitions while upholding thermal stability and component longevity.",
     },
     {
-      id: 4,
+      id: 5,
       title: "Smart Light Alarm System",
       image: "/images/project2.jpg",
       preview: "Embedded scheduling-based lighting with structured firmware logic.",
@@ -68,7 +79,7 @@ export default function Home() {
         "Automated lighting schedules with embedded firmware logic, enabling timed state transitions for alarm and lighting scenarios. Incorporated hardware-software controls for reliable synchronization between microcontroller signals and physical lighting outputs.",
     },
     {
-      id: 5,
+      id: 6,
       title: "5×5 LED Matrix Audio-Reactive Display",
       image: "/images/project3.jpg",
       preview: "Real-time audio-driven LED visualization system.",
