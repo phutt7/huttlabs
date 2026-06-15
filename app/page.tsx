@@ -29,7 +29,7 @@ export default function Home() {
   image: "/images/project2_energy.jpg",
   preview: "STM32F401RE + FreeRTOS reads a PZEM-004T power meter over Modbus RTU, detects faults, and publishes live voltage/current/power to HiveMQ via ESP8266 WiFi.",
   skills: ["Embedded C", "FreeRTOS", "Modbus RTU", "MQTT", "STM32 HAL", "CRC16", "ESP8266 AT", "IWDG Watchdog", "Mutex Architecture"],
-  videoUrl: "https://www.youtube.com/watch?v=YOUR_VIDEO_ID",
+  videoUrl: null,
   docsUrl: "/docs/Modbus_Energy_Monitor_Spec.pdf",
   description:
     "Implemented a real-time energy monitoring node from scratch on STM32F401RE. Custom Modbus RTU driver — no library — constructs the 8-byte request frame with CRC16 and parses the 25-byte PZEM-004T response into six AC measurements. Three prioritized FreeRTOS tasks handle polling, fault detection, and telemetry under a mutex-protected shared data struct. Fault monitor kicks the IWDG watchdog every 100ms — four configurable thresholds: over-power, under-voltage, low power factor, comms timeout. Task C formats CSV to USART2 for local logging and JSON to USART3 for ESP8266 MQTT publish to HiveMQ. Protocols directly relevant to solar inverter and BMS integration work at companies like Enphase, SolarEdge, and Stem.",
